@@ -55,11 +55,6 @@ public class ValidatorBenchmark extends DefaultBenchmark {
         return validate(validatorState, iterations);
     }
 
-    @Benchmark
-    public List<Set<ConstraintViolation<Car>>> _6_validate1_000_000Car(ValidatorState validatorState) {
-        int iterations = 1_000_000;
-        return validate(validatorState, iterations);
-    }
 
     private List<Set<ConstraintViolation<Car>>> validate(ValidatorState validatorState, int validations) {
         Validator validator = validatorState.validator;
